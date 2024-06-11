@@ -59,8 +59,8 @@ export async function mealsRoutes(app: FastifyInstance) {
     return {
       meals,
       mealsQuantity: meals.length,
-      mealsWithinDiet,
-      mealsWithDiet,
+      mealsWithinDiet: mealsWithinDiet.count,
+      mealsWithDiet: mealsWithDiet.count,
       bestSequenceWithinDiet: calculateConsecutiveDays(),
     }
   })
